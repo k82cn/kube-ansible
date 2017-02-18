@@ -6,7 +6,7 @@ kube_version: 1.4.5
 kube_source_type: localBuild
 
 # The port that the Kubernetes apiserver component listens on.
-kube_master_api_port: 443
+kube_master_api_port: 6443
 
 # This directory is where all the additional scripts go
 # that Kubernetes normally puts in /srv/kubernetes.
