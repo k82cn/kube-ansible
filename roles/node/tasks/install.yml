@@ -17,12 +17,6 @@
     state: latest
   when: ansible_distribution == 'Ubuntu'
 
-# Change default value of kube_source_type
-- name: Force kube_source_type to github
-  set_fact:
-    kube_source_type: "github-release"
-  when: is_coreos or ansible_distribution == 'Ubuntu'
-
 # Install kubernetes node components
 - include: packageManagerInstall.yml
   when: kube_source_type == "packageManager"
