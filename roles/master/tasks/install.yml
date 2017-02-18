@@ -8,7 +8,7 @@
 
 - name: Retrieve systemd files for github-release kube_source_type type
   include: retrieve-systemd-files.yml
-  when: kube_source_type == "github-release" or (ansible_distribution == 'Ubuntu' and ansible_distribution_major_version|int == 16)
+  when: kube_source_type == "localBuild" or kube_source_type == "github-release" or (ansible_distribution == 'Ubuntu' and ansible_distribution_major_version|int == 16)
 
 # Install kubernetes master components
 - include: packageManagerInstall.yml
