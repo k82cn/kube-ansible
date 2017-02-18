@@ -136,4 +136,3 @@ By changing the `networking` variable in the `inventory/group_vars/all.yml` file
 
 * When updating flannel to version `0.5.5-7` or higher on Fedora, the `/etc/sysconfig/flannel` configuration file (if changed) must be updated to reflect renamed systemd environment variables.
 
-[![Analytics](https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/contrib/ansible/README.md?pixel)]()

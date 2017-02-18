@@ -1,9 +1,10 @@
 ---
 - name: Copy node binaries
-  copy:
+  synchronize:
     src: "{{ localBuildOutput }}/{{ item }}"
     dest: /usr/bin/
     mode: 0755
+    delegate_to: "{{ inventory_hostname }}"
   with_items:
     - kubelet
     - kube-proxy
